@@ -1,0 +1,31 @@
+.screen-header {
+  display: flex; /* 모든 것들이 나란히 정렬 */
+  justify-content: space-between;
+
+  align-items: center; /* 아이콘들을 교차축으로 정렬 */
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  /* varibles.css에 horizontal-space 값을 지정함 */
+}
+
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600; /* 폰트 굵기 */
+}
+
+.screen-header__icons span {
+  margin-left: 25px; /* 아이콘 사이 공간 */
+}
+
+@keyframes rotategear {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotategear 1s linear infinite;
+}

@@ -1,0 +1,56 @@
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: -15px; /* screen-header.css에 margin-bottom: 
+  15px; 값을 주면 friends.css의 friends-display-link에도 적용이 되기때문에 margin-top: -15px;값을 준다 */
+}
+
+#friends-display-link i {
+  color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes hideSplashscreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute; /* 모든 것의 위에 있고 모든 것을 커버 */
+  height: 100vh; /* 화면높이의 100% */
+  width: 100vw; /* 화면 넓이의 100% */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 110px;
+  animation: hideSplashscreen 0.4s ease-in-out forwards;
+  animation-delay: 1s;
+}
